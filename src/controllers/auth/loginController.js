@@ -36,8 +36,6 @@ const databaseLogin = async (req, res, next) => {
     expiresIn: "7d",
   });
 
-  return res.json(requestData);
-
   const secondsInWeek = 604800;
   res.cookie("token", token, {
     httpOnly: true,
