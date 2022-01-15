@@ -42,7 +42,7 @@ app.use(async (req, res, next) => {
 
 app.use(cors());
 app.use(cors({origin: "*", exposedHeaders: "*"}));
-app.use(cors({origin: "https://clever-davinci-940e10.netlify.app", exposedHeaders: "*", credentials: true}));
+// app.use(cors({origin: "https://clever-davinci-940e10.netlify.app", exposedHeaders: "*", credentials: true}));
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
