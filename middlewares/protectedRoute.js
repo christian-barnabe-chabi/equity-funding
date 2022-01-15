@@ -9,8 +9,9 @@ const User = require("../src/models/User");
  * req.user gets the User's id
  */
 const protectedRoute = async (req, res, next) => {
-  const token = req.cookies.token;
-
+  
+  const token = req.headers["access-token"];
+  
   if (!token) {
     return res.status(401).json({ error: "Not authenticated" });
   }

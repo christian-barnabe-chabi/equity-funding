@@ -15,13 +15,7 @@ const databaseRegister = async (req, res, next) => {
 
   const APP_SECRET = process.env.APP_SECRET;
   const token = jwt.sign({ id: user.id }, APP_SECRET, {
-    expiresIn: "7d",
-  });
-
-  const secondsInWeek = 604800;
-  res.cookie("token", token, {
-    httpOnly: true,
-    maxAge: secondsInWeek,
+    expiresIn: 604800,
   });
 
   const authData = getAuthResponse(user, {token: token, expiresIn: "7d"});
