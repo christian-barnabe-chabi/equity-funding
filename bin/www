@@ -5,8 +5,9 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('api-moyo-corp-rental-app-v1:server');
-var http = require('http');
+var debug = require('debug')('equity-funding:server');
+// var http = require('http');
+var http = require('https');
 const chalk = require('chalk');
 
 /**
