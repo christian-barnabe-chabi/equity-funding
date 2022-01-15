@@ -5,6 +5,8 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const chalk = require("chalk");
+const cors = require('cors');
+
 const {
   indexRouter,
   usersRouter,
@@ -12,9 +14,7 @@ const {
   authRouter,
 } = require("./routes/routesBundle");
 
-const db = require("./db");
 const { protectedRoute } = require("./middlewares/protectedRoute");
-const User = require("./src/models/User");
 
 const app = express();
 // view engine setup
@@ -42,6 +42,7 @@ app.use(async (req, res, next) => {
 
 // (new User).install();
 
+app.use(cors());
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
