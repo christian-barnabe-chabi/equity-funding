@@ -13,8 +13,6 @@ const databaseLogin = async (req, res, next) => {
       throw new Error(error);
     });
 
-  return res.json(requestData);
-
   if (!user) {
     return res
       .status(401)
@@ -31,6 +29,8 @@ const databaseLogin = async (req, res, next) => {
       .status(401)
       .json({ error: "Mot de passe incorrect. Veuillez réessayer" });
   }
+
+  return res.json(requestData);
 
   const APP_SECRET = process.env.APP_SECRET;
   const token = jwt.sign({ id: user.id }, APP_SECRET, {
