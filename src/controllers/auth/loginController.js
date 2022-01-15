@@ -30,12 +30,13 @@ const databaseLogin = async (req, res, next) => {
       .json({ error: "Mot de passe incorrect. Veuillez réessayer" });
   }
 
-  return res.json(requestData);
 
   const APP_SECRET = process.env.APP_SECRET;
   const token = jwt.sign({ id: user.id }, APP_SECRET, {
     expiresIn: "7d",
   });
+
+  return res.json(requestData);
 
   const secondsInWeek = 604800;
   res.cookie("token", token, {
