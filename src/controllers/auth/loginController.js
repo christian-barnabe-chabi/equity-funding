@@ -6,14 +6,14 @@ const bcrypt = require('bcryptjs');
 const databaseLogin = async (req, res, next) => {
   const requestData = req.body;
 
-  return res.json(requestData);
-
   const user = await User.findOne({
     where: {email: requestData.email},
   }).catch((error) => {
       res.status(500).json({error: error});
       throw new Error(error);
     });
+
+  return res.json(requestData);
 
   if (!user) {
     return res
