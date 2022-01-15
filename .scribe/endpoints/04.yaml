@@ -1,0 +1,124 @@
+name: User Permissions
+endpoints:
+  - uri: /v1/user-permissions
+    httpMethods:
+      - GET
+    metadata:
+      title: Get User Permissions
+      description: null
+      authenticated: true
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters: {}
+    responses: []
+    responseFields: {}
+  - uri: '/v1/user-permissions/:id'
+    httpMethods:
+      - GET
+    metadata:
+      title: Get User Permission
+      description: null
+      authenticated: true
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+    urlParameters:
+      id:
+        name: id
+        type: ObjectId
+        required: true
+        description: ''
+        example: incidunt
+    queryParameters: {}
+    bodyParameters: {}
+    responses: []
+    responseFields: {}
+  - uri: /v1/user-permissions
+    httpMethods:
+      - POST
+    metadata:
+      title: Create User Permission
+      description: null
+      authenticated: true
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters:
+      module:
+        name: module
+        type: ObjectId
+        required: true
+        description: ''
+        example: perferendis
+      accessCode:
+        name: accessCode
+        type: string
+        required: true
+        description: ''
+        example: optio
+    responses: []
+    responseFields: {}
+  - uri: '/v1/user-permissions/:id'
+    httpMethods:
+      - PUT
+    metadata:
+      title: Update Get User Permission
+      description: null
+      authenticated: true
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+    urlParameters:
+      id:
+        name: id
+        type: ObjectId
+        required: true
+        description: ''
+        example: molestiae
+    queryParameters: {}
+    bodyParameters:
+      module:
+        name: module
+        type: ObjectId
+        required: true
+        description: ''
+        example: a
+      accessCode:
+        name: accessCode
+        type: string
+        required: true
+        description: ''
+        example: quia
+    responses: []
+    responseFields: {}
+  - uri: '/v1/user-permissions/:id'
+    httpMethods:
+      - DELETE
+    metadata:
+      title: Delete Get User Permission
+      description: null
+      authenticated: true
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+    urlParameters:
+      id:
+        name: id
+        type: ObjectId
+        required: true
+        description: ''
+        example: dolore
+    queryParameters: {}
+    bodyParameters: {}
+    responses: []
+    responseFields: {}

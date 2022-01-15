@@ -1,0 +1,248 @@
+name: Users
+endpoints:
+  - uri: /v1/users
+    httpMethods:
+      - GET
+    metadata:
+      title: Get Users
+      description: null
+      authenticated: true
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters: {}
+    responses: []
+    responseFields: {}
+  - uri: '/v1/users/:id'
+    httpMethods:
+      - GET
+    metadata:
+      title: Get User
+      description: null
+      authenticated: true
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+    urlParameters:
+      id:
+        name: id
+        type: ObjectId
+        required: true
+        description: ''
+        example: unde
+    queryParameters: {}
+    bodyParameters: {}
+    responses: []
+    responseFields: {}
+  - uri: /v1/users
+    httpMethods:
+      - POST
+    metadata:
+      title: Create User
+      description: null
+      authenticated: true
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters:
+      email:
+        name: email
+        type: string
+        required: true
+        description: ''
+        example: id
+      displayName:
+        name: displayName
+        type: string
+        required: true
+        description: ''
+        example: aliquam
+      password:
+        name: password
+        type: string
+        required: true
+        description: ''
+        example: architecto
+      role:
+        name: role
+        type: ObjectId
+        required: true
+        description: ''
+        example: commodi
+    responses: []
+    responseFields: {}
+  - uri: '/v1/users/:id'
+    httpMethods:
+      - PUT
+    metadata:
+      title: Update User
+      description: null
+      authenticated: true
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+    urlParameters:
+      id:
+        name: id
+        type: ObjectId
+        required: true
+        description: ''
+        example: voluptas
+    queryParameters: {}
+    bodyParameters:
+      displayName:
+        name: displayName
+        type: string
+        required: true
+        description: ''
+        example: ut
+    responses: []
+    responseFields: {}
+  - uri: /v1/users/permission/revoke
+    httpMethods:
+      - POST
+    metadata:
+      title: Revoke Permission
+      description: Revoke a permission on a module from an user
+      authenticated: true
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters:
+      module:
+        name: module
+        type: ObjectId
+        required: true
+        description: ''
+        example: ad
+      user:
+        name: user
+        type: ObjectId
+        required: true
+        description: ''
+        example: quia
+    responses: []
+    responseFields: {}
+  - uri: /v1/users/permission/grant
+    httpMethods:
+      - POST
+    metadata:
+      title: Grant Permission
+      description: Grant a permission on a module to an user
+      authenticated: true
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters:
+      module:
+        name: module
+        type: ObjectId
+        required: true
+        description: ''
+        example: possimus
+      user:
+        name: user
+        type: ObjectId
+        required: true
+        description: ''
+        example: eos
+      accessCode:
+        name: accessCode
+        type: string
+        required: true
+        description: ''
+        example: et
+    responses: []
+    responseFields: {}
+  - uri: /v1/users/change-password
+    httpMethods:
+      - POST
+    metadata:
+      title: Change password
+      description: null
+      authenticated: true
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters:
+      oldPassword:
+        name: oldPassword
+        type: string
+        required: true
+        description: ''
+        example: similique
+      password:
+        name: password
+        type: string
+        required: true
+        description: ''
+        example: nesciunt
+    responses: []
+    responseFields: {}
+  - uri: /v1/users/change-role
+    httpMethods:
+      - POST
+    metadata:
+      title: Change role
+      description: null
+      authenticated: true
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters:
+      role:
+        name: role
+        type: ObjectId
+        required: true
+        description: ''
+        example: fugit
+      user:
+        name: user
+        type: ObjectId
+        required: true
+        description: ''
+        example: natus
+    responses: []
+    responseFields: {}
+  - uri: '/v1/users/:id'
+    httpMethods:
+      - DELETE
+    metadata:
+      title: Delete User
+      description: null
+      authenticated: true
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+    urlParameters:
+      id:
+        name: id
+        type: ObjectId
+        required: true
+        description: ''
+        example: nostrum
+    queryParameters: {}
+    bodyParameters: {}
+    responses: []
+    responseFields: {}

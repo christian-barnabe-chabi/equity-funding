@@ -1,0 +1,140 @@
+name: authentication
+endpoints:
+  - uri: /v1/auth/database-login
+    httpMethods:
+      - POST
+    metadata:
+      title: Auth user using the database
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters:
+      email:
+        name: email
+        type: string
+        required: true
+        description: ''
+        example: amet
+      password:
+        name: password
+        type: string
+        required: true
+        description: ''
+        example: praesentium
+    responses: []
+    responseFields: {}
+  - uri: /v1/auth/google-register
+    httpMethods:
+      - POST
+    metadata:
+      title: Register users using the google auth
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters: {}
+    responses: []
+    responseFields: {}
+  - uri: /v1/auth/database-register
+    httpMethods:
+      - POST
+    metadata:
+      title: Register users using the database
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters:
+      email:
+        name: email
+        type: string
+        required: true
+        description: ''
+        example: qui
+      givenName:
+        name: givenName
+        type: string
+        required: true
+        description: ''
+        example: et
+      familyName:
+        name: familyName
+        type: string
+        required: true
+        description: ''
+        example: necessitatibus
+      password:
+        name: password
+        type: string
+        required: true
+        description: ''
+        example: sit
+    responses: []
+    responseFields: {}
+  - uri: /v1/auth/google-login
+    httpMethods:
+      - POST
+    metadata:
+      title: Auth user using google auth
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters:
+      googleEmail:
+        name: googleEmail
+        type: string
+        required: true
+        description: ''
+        example: dolore
+      googleId:
+        name: googleId
+        type: string
+        required: true
+        description: ''
+        example: voluptatum
+    responses: []
+    responseFields: {}
+  - uri: /v1/auth/user
+    httpMethods:
+      - GET
+    metadata:
+      title: Get authenticated user details
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters: {}
+    responses: []
+    responseFields: {}
+  - uri: /v1/auth/logout
+    httpMethods:
+      - GET
+    metadata:
+      title: Logout the auth user
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: {}
+    queryParameters: {}
+    bodyParameters: {}
+    responses: []
+    responseFields: {}
