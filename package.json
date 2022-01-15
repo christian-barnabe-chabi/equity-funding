@@ -8,7 +8,7 @@
     "github": "https://github.com/Zenith-I-O/Tenancy-And-Occupation-Management-Solution.git"
   },
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "nodemon ./bin/www",
     "start_server": "pm2 start ./bin/www",
     "stop_server": "pm2 stop ./bin/www",
     "generate-doc": "npx scribe generate -a app.js --force"

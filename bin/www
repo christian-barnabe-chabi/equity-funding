@@ -6,8 +6,7 @@
 
 var app = require('../app');
 var debug = require('debug')('equity-funding:server');
-// var http = require('http');
-var http = require('https');
+var http = require('http');
 const chalk = require('chalk');
 
 /**
